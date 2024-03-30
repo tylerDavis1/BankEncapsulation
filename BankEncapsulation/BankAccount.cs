@@ -1,27 +1,53 @@
-﻿namespace BankEncapsulation
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BankEncapsulation
 {
-    public class Program
+    public class BankAccount
     {
-        static void Main(string[] args)
+
+        public BankAccount()
         {
-            var account = new BankAccount();
-            
-            Console.WriteLine("How much would you like to deposit?"); 
 
-            var amountToDeposit = double.Parse(Console.ReadLine());
-            
-
-            account.Deposit(amountToDeposit);
-
-            Console.WriteLine($"Thanks for banking with us. Your balance is {account.GetBalance()}");
-            
-              
-
-
-            
         }
+
+
+
+
+        private double balance = 0;
+
+
+
+        //encapsulation 
+        public void Deposit(double amount)
+        {
+            balance = amount;
+        }
+
+        public double GetBalance()
+        {
+            return balance;
+        }
+
+
+
+
+
+
+
+
+
+
     }
+
+    
+
 }
+
+
 
 //Create a new public class named BankAccount
 //In your BankAccount class, create the following:
